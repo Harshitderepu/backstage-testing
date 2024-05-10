@@ -38,16 +38,16 @@ export const HowItWorks = () => {
   return (
     <section
       id="howItWorks"
-      className="container text-center py-24 sm:py-32"
+      className=" text-center py-24 sm:py-32 bg-bggreen"
     >
-      <h2 className="text-3xl md:text-4xl font-bold ">
+      <h2 className="text-3xl md:text-4xl font-bold text-white ">
         How It{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="text-pgreen">
           Works{" "}
         </span>
         Step-by-Step Guide
       </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
+      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-pgreen">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
         dolor pariatur sit!
       </p>
@@ -56,15 +56,15 @@ export const HowItWorks = () => {
         {features.map(({ icon, title, description }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-muted/50"
+            className="bg-pgreen"
           >
             <CardHeader>
-              <CardTitle className="grid gap-4 place-items-center">
+              <CardTitle className="grid gap-4 place-items-center text-bgreen">
                 {icon}
                 {title}
               </CardTitle>
             </CardHeader>
-            <CardContent>{description}</CardContent>
+            <CardContent className=" text-bggreen">{description}</CardContent>
           </Card>
         ))}
       </div>

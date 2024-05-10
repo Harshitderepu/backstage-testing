@@ -1,68 +1,23 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
 import cubeLeg from "../assets/cube-leg.png";
-
-interface ServiceProps {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-}
-
-const serviceList: ServiceProps[] = [
-  {
-    title: "Code Collaboration",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <ChartIcon />,
-  },
-  {
-    title: "Project Management",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <WalletIcon />,
-  },
-  {
-    title: "Task Automation",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
-  },
-];
 
 export const Services = () => {
   return (
-    <section className="container py-24 sm:py-32">
+    <section className=" py-24 sm:py-32 bg-bggreen">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
-            </span>
-            Services
+        <div className=" px-12">
+          <h2 className="text-6xl md:text-6xl font-bold text-pgreen">
+            <span className=" text-white ">What is </span>
+            AgriVijay
           </h2>
 
-          <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
-          </p>
+          <p className="text-white text-xl mt-4 mb-8 ">
+          AgriVijay is India’s first Marketplace of Renewable Energy products for farmers & rural households bringing all products in solar, biogas, thermal, wind & electric under one roof and with Energy Advisory approach where farmers’ energy needs are understood coupled with waste availability at their end before products are recommended, sold and deployed along with abating GHG/CO2 emissions mitigating Climate Change aligned with United Nations SDG’s becoming Energy Independent along with increased savings & income.
 
-          <div className="flex flex-col gap-8">
-            {serviceList.map(({ icon, title, description }: ServiceProps) => (
-              <Card key={title}>
-                <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-                    {icon}
-                  </div>
-                  <div>
-                    <CardTitle>{title}</CardTitle>
-                    <CardDescription className="text-md mt-2">
-                      {description}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
+
+          <p className="text-white text-xl mt-4 mb-8 ">
+          With the help of dedicated Website, Call Centres in local language, Field Sales, Technical Team & offline stores model at village level known as Renewable Energy Stores, the knowledge and benefits of Renewable Energy products are disseminated providing high quality and branded renewable energy products on rural grounds with benefits such as free solar insurance, long term warranty, assured after sales service, EMI/Financing facility etc. helping Farmers & Rural households to become Renewable Energy producers & consumers.
+          </p>
+          </p>
         </div>
 
         <img

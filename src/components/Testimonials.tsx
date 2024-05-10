@@ -63,15 +63,15 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="container py-24 sm:py-32"
+      className=" py-24  px-2 sm:py-32 bg-pgreen  "
     >
       <h2 className="text-3xl md:text-4xl font-bold">
         Discover Why
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+        <span className="text-bggreen">
           {" "}
           People Love{" "}
         </span>
-        This Landing Page
+        
       </h2>
 
       <p className="text-xl text-muted-foreground pt-4 pb-8">
