@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-testing
+  annotations:
+    github.com/project-slug: Harshitderepu/backstage-testing
+spec:
+  type: other
+  lifecycle: unknown
+  owner: "Harshit "
