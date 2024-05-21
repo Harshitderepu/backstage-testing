@@ -3,78 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./src/assets/icon.ico" />
-    <!-- href="/vite.svg" -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
     <title>Shadcn/React - Landing template</title>
     <meta name="title" content="Shadcn/React - Landing template" />
-    <meta
-      name="description"
-      content="Free Shadcn landing page for React developers"
-    />
+    <meta name="description" content="Free Shadcn landing page for React developers" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://github.com/leoMirandaa/shadcn-landing-page.git"
-    />
+    <meta property="og:url" content="https://github.com/leoMirandaa/shadcn-landing-page.git" />
     <meta property="og:title" content="Shadcn/React - Landing template" />
-    <meta
-      property="og:description"
-      content="Free Shadcn landing page for React developers"
-    />
-    <meta
-      property="og:image"
-      content="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1705560686/og-images/shadc-react_gketpd.jpg"
-    />
+    <meta property="og:description" content="Free Shadcn landing page for React developers" />
+    <meta property="og:image" content="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1705560686/og-images/shadc-react_gketpd.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-
-    <meta
-      name="twitter:url"
-      content="https://github.com/leoMirandaa/shadcn-landing-page.git"
-    />
+    <meta name="twitter:url" content="https://github.com/leoMirandaa/shadcn-landing-page.git" />
     <meta name="twitter:title" content="Shadcn/React - Landing template" />
-    <meta
-      name="twitter:description"
-      content="Free Shadcn landing page for React developers"
-    />
-    <meta
-      name="twitter:image"
-      content="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1705560686/og-images/shadc-react_gketpd.jpg"
-    />
-    <!-- OpenReplay Tracking Code for derepu -->
-<!-- OpenReplay Tracking Code for demo -->
-<script>
-  var initOpts = {
-    projectKey: "jV8NB1TvaxkJcLe2ulId",
-    defaultInputMode: 2,
-    obscureTextNumbers: false,
-    obscureTextEmails: true,
-  };
-  var startOpts = { userID: "" };
-  (function(A,s,a,y,e,r){
-    r=window.OpenReplay=[e,r,y,[s-1, e]];
-    s=document.createElement('script');s.src=A;s.async=!a;
-    document.getElementsByTagName('head')[0].appendChild(s);
-    r.start=function(v){r.push([0])};
-    r.stop=function(v){r.push([1])};
-    r.setUserID=function(id){r.push([2,id])};
-    r.setUserAnonymousID=function(id){r.push([3,id])};
-    r.setMetadata=function(k,v){r.push([4,k,v])};
-    r.event=function(k,p,i){r.push([5,k,p,i])};
-    r.issue=function(k,p){r.push([6,k,p])};
-    r.isActive=function(){return false};
-    r.getSessionToken=function(){};
-  })("//static.openreplay.com/latest/openreplay.js",1,0,initOpts,startOpts);
-</script>
+    <meta name="twitter:description" content="Free Shadcn landing page for React developers" />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dbzv9xfjp/image/upload/v1705560686/og-images/shadc-react_gketpd.jpg" />
 
+    <!-- OpenReplay Tracking Code for dabadu -->
+    <script>
+      var initOpts = {
+        projectKey: "cLl33kE8zYbweg7iiJjd",
+        defaultInputMode: 2,
+        obscureTextNumbers: false,
+        obscureTextEmails: true,
+      };
+      var startOpts = { userID: "" };
+      (function(A,s,a,y,e,r){
+        r=window.OpenReplay=[e,r,y,[s-1, e]];
+        s=document.createElement('script');s.src=A;s.async=!a;
+        document.getElementsByTagName('head')[0].appendChild(s);
+        r.start=function(v){r.push([0])};
+        r.stop=function(v){r.push([1])};
+        r.setUserID=function(id){r.push([2,id])};
+        r.setUserAnonymousID=function(id){r.push([3,id])};
+        r.setMetadata=function(k,v){r.push([4,k,v])};
+        r.event=function(k,p,i){r.push([5,k,p,i])};
+        r.issue=function(k,p){r.push([6,k,p])};
+        r.isActive=function(){return false};
+        r.getSessionToken=function(){};
+      })("//static.openreplay.com/latest/openreplay.js",1,0,initOpts,startOpts);
 
+      // Set User ID
+      OpenReplay.setUserID('john@doe.com');
 
-
-
+      // Set Metadata
+      OpenReplay.setMetadata('role', 'admin');
+      OpenReplay.setMetadata('plan', 'premium');
+    </script>
 
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {

@@ -88,6 +88,7 @@ export const Testimonials = () => {
             >
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
                 <Avatar>
+                  <h1>hello</h1>
                   <AvatarImage
                     alt=""
                     src={image}
