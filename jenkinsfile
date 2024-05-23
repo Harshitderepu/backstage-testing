@@ -7,8 +7,15 @@ pipeline {
                 sh 'checkout scm'
             }
         }
+        stage('install') {
+            steps {
+                sh 'npm install'
+            }
+        }
         stage('build') {
             steps {
-                sh '
+                sh 'npm test'
+            }
+        }
     }
 }
