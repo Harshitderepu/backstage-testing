@@ -1,16 +1,35 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "NodeJS 14"
+    }
+
     stages {
-        stage('install') {
+        stage('Checkout repository') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Verify Node.js and npm') {
+            steps {
+                sh 'node -v'
+                sh 'npm -v'
+            }
+        }
+
+        stage('Install dependencies') {
             steps {
                 sh 'npm install'
             }
         }
-        stage('build') {
+
+        stage('Run tests') {
             steps {
                 sh 'npm test'
             }
         }
     }
 }
+
