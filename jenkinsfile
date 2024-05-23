@@ -1,0 +1,53 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout repository') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Set up Node.js') {
+            steps {
+                script {
+                    def nodeVersion = '14'
+                    def nvmDir = "${env.WORKSPACE}/.nvm"
+                    sh """
+                        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+                        export NVM_DIR='${nvmDir}'
+                        [ -s '${nvmDir}/nvm.sh' ] && . '${nvmDir}/nvm.sh'
+                        nvm install ${nodeVersion}
+                        nvm use ${nodeVersion}
+                    """
+                }
+            }
+        }
+
+        stage('Install dependencies') {
+            steps {
+                script {
+                    def nvmDir = "${env.WORKSPACE}/.nvm"
+                    sh """
+                        export NVM_DIR='${nvmDir}'
+                        [ -s '${nvmDir}/nvm.sh' ] && . '${nvmDir}/nvm.sh'
+                        npm install
+                    """
+                }
+            }
+        }
+
+        stage('Run tests') {
+            steps {
+                script {
+                    def nvmDir = "${env.WORKSPACE}/.nvm"
+                    sh """
+                        export NVM_DIR='${nvmDir}'
+                        [ -s '${nvmDir}/nvm.sh' ] && . '${nvmDir}/nvm.sh'
+                        npm test
+                    """
+                }
+            }
+        }
+    }
+}
